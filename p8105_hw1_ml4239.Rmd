@@ -19,3 +19,15 @@ problem_1_data_frame = tibble(
   vec_factor = factor(c("I","you","she","he", "it", "they", "ze", "he", "xe", "none"))
 )
 ```
+
+##Take the mean of each variable in dataframe 'problem_1_data_frame'.
+
+```{r}
+mean(problem_1_data_frame$uniform_sample)
+mean(problem_1_data_frame$vec_logic)
+mean(problem_1_data_frame$vec_character)
+mean(problem_1_data_frame$vec_factor)
+```
+The mean of random sample and logical vector work.  
+The mean of character vector and factor vector do not work.
+Because the variables in the last two are not numeric or logical.
