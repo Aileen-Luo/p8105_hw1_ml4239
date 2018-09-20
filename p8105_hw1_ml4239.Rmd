@@ -68,3 +68,32 @@ The size of the dataset is  `r object.size(problem_2_data_frame)`
 The mean of x is `r mean(problem_2_data_frame$x)`  
 The median of x is `r median(problem_2_data_frame$x)`  
 The proportion of cases for which the logical vector is `TRUE` is `r sum(problem_2_data_frame$vec_logic_2 == "TRUE")/1000`
+
+##Make a scatterplot
++ scatterplot of `y` vs `x` using logical variable
+```{r}
+library(ggplot2)
+plot_1 = ggplot(problem_2_data_frame, aes(x, y))+geom_point(aes(colour = vec_logic_2))
+plot_1
+```
+
++ scatterplot of `y` vs `x` using numeric variables
+```{r}
+library(ggplot2)
+plot_2 = ggplot(problem_2_data_frame, aes(x, y))+geom_point(aes(colour = vec_numeric_2))
+plot_2
+```
+
+* scatterplot of `y` vs `x` using factor variables
+```{r}
+library(ggplot2)
+plot_3 = ggplot(problem_2_data_frame, aes(x, y))+geom_point(aes(colour = vec_factor_2))
+plot_3
+```
+The color scale using numeric variables is larger than using factor variables.Color scale using factor variables has two colors but using numerica variables gets the color range from 0 to 1.
+
+
++ Export your first scatterplot to your project directory
+```{r}
+ggsave("first scatterplot.pdf")
+```
