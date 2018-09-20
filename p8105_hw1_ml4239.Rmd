@@ -31,3 +31,14 @@ mean(problem_1_data_frame$vec_factor)
 The mean of random sample and logical vector work.  
 The mean of character vector and factor vector do not work.
 Because the variables in the last two are not numeric or logical.
+
+##Convert variables from one type to another
++ Applies the as.numeric function to the logical, character, and factor variables 
+```{r eval = FALSE}
+as.numeric(problem_1_data_frame$vec_logic)
+as.numeric(problem_1_data_frame$vec_character)
+as.numeric(problem_1_data_frame$vec_factor)
+```
+The variables in vec_logic convert to "0"&"1" from "Flase"&"True".  
+The variables in vec_charater convert to NA.   
+The variables in vec_factor convert to different numbers according to their levels (in alphabet). 
