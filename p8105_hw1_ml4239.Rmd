@@ -42,3 +42,12 @@ as.numeric(problem_1_data_frame$vec_factor)
 The variables in vec_logic convert to "0"&"1" from "Flase"&"True".  
 The variables in vec_charater convert to NA.   
 The variables in vec_factor convert to different numbers according to their levels (in alphabet). 
+
++ Convert character variable from character to factor to numeric; similarly, convert factor variable from factor to character to numeric. 
+
+```{r}
+as.numeric(as.factor(problem_1_data_frame$vec_character))
+as.numeric(as.character(problem_1_data_frame$vec_factor))
+```
+The variables from character variable from character to factor to numeric are convert to numbers according to the factor level.  
+The variables from factor variable from factor to character to numeric are convert to NA.
