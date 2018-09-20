@@ -1,0 +1,6 @@
+---
+title: "p8105_hw1_ml4239"
+output: github_document
+Author: "Man Luo"
+Date: 2018-09-19
+---
